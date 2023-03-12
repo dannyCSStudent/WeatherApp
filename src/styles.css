@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    width: 500px;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 30px;
+}
+
+.header img {   
+    width: 100px;
+}
+
+.search-bar {
+  display: flex;
+  padding: 1rem;
+  font-size: 30px;
+}
+
+.search-bar input {
+  font-size: 20px;
+  width: -webkit-fill-available;
+  background-color: transparent;
+}
+
+.search-bar button {
+  font-size: 20px;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.city-info {
+    font-size: 40px;
+    display: flex;
+    align-self: center;
+    padding: 1rem;
+}
+
+.temp-info {
+    display: flex;
+    align-self: center;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    font-size: 50px;
+}
+
+.temp-info img {
+    width: 100px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    height: 210px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.weather-info .low {
+  background-image: url('./images/low-temperature.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.weather-info .feels {
+  background-image: url('./images/feels-temperature.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.weather-info .humid {
+  background-image: url('./images/humidity.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.weather-info .high {
+  background-image: url('./images/high-temperature.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.weather-info .attr {
+  font-size: 20px;
+}
+
+.weather-info .val {
+  font-size: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+  
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}  
+ 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px solid black;
+}
+  
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+  
+input:checked + .slider {
+  background-color: #2196F3;
+}
+  
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
