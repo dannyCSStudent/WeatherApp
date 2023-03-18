@@ -1,13 +1,12 @@
-
 import weather from './images/weather.png';
 import clouds from './images/clouds.png';
 
-const buildPage = () => { 
+export const buildPage = () => { 
     const weatherImage = new Image();
     weatherImage.src = weather;
     const cloudImage = new Image();
     cloudImage.src = clouds;
-
+    
     const body = document.querySelector('body');
     const container = document.createElement('div');
     const header = document.createElement('div');
@@ -39,12 +38,13 @@ const buildPage = () => {
     const celsiusSwitch = document.createElement('label');
     const celsius = document.createElement('input');
     const slider = document.createElement('slider');
-
+    
     container.classList.add('container');
 
     header.classList.add('header');
     headerImg.setAttribute('src', weatherImage.src);
     currentDate.classList.add('current-date');
+    currentDate.textContent = new Date().toDateString();
     header.appendChild(headerImg);
     header.appendChild(currentDate)
     container.appendChild(header);
@@ -59,7 +59,6 @@ const buildPage = () => {
 
     cityInfo.classList.add('city-info');
     cityCountry.classList.add('city-country');
-    cityCountry.textContent = 'Jacona, Mexico';
     cityInfo.appendChild(cityCountry)
     container.appendChild(cityInfo);
 
@@ -119,7 +118,5 @@ const buildPage = () => {
     footer.appendChild(celsiusSwitch);
     container.appendChild(footer);
 
-    body.appendChild(container);
+    body.appendChild(container); 
 }
-
-export default buildPage
